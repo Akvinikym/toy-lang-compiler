@@ -1,0 +1,17 @@
+# Configuration files
+.idea/
+.vscode/
+.DS_Store
+
+# Build files
+cmake-build-debug/
+build/
+
+# Executables
+*.vocout
+
+# Something
+test/typeCheckerTest.vo
+test/typeCheckerAllTests.vo
+test/microtests/main.out
+test/microtests/test_out.o

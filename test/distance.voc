@@ -1,0 +1,17 @@
+routine avg(x real, y real): real is
+    return 0.5 * (x + y)
+end
+
+routine sqrt(x real): real is
+    var res is 1.0
+    for i in 0 .. 1000 loop
+        var div is x / res
+        var a is avg(res, div)
+        res := a
+    end
+    return res
+end
+
+routine vlen(x real, y real): real is
+    return sqrt((x * x + y * y))
+end

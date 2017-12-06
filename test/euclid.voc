@@ -1,0 +1,8 @@
+routine gcd(p integer, q integer): integer is
+    while q /= 0 loop
+        var temp is q
+        q := p % q
+        p := temp
+    end
+    return p
+end

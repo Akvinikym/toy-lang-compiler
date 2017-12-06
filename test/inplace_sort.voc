@@ -1,0 +1,21 @@
+routine sort(a array[1] integer, s integer) is
+    for i in 1 .. s loop
+        for j in 1 .. s + 1 - i loop
+            if a[j] > a[j+1] then
+                var temp: integer is a[j]
+                a[j] := a[j+1]
+                a[j+1] := temp
+            end
+        end
+    end
+end
+
+
+routine sort_array(): array[1] integer is
+    var a: array[5] integer
+    for i in 1 .. 6 loop
+        a[i] := 10 - i
+    end
+    sort(a, 5)
+    return a
+end

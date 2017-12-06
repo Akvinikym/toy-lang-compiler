@@ -1,0 +1,148 @@
+routine sum_two_ints(): integer is
+    var a: integer is 4
+    return a + 6
+end
+
+routine sub_two_ints(): integer is
+    var a: integer is 7
+    return a - 2
+end
+
+routine mul_two_ints(): integer is
+    var a: integer is 4
+    return a * 5
+end
+
+routine div_two_ints(): integer is
+    var a: integer is 12
+    return a / 2
+end
+
+
+routine sum_two_reals(): real is
+    var a: real is 0.4
+    return a + 0.8
+end
+
+routine sub_two_reals(): real is
+    var a: real is 15.5
+    return a - 4.1
+end
+
+routine mul_two_reals(): real is
+    var a: real is 3.14
+    return a * 2.7
+end
+
+routine div_two_reals(): real is
+    var a: real is 2.5
+    return 2.5 / 1.6
+end
+
+
+routine give_true(): boolean is
+    var a: boolean is true
+    return a
+end
+
+routine give_false(): boolean is
+    var a: boolean is false
+    return a
+end
+
+
+routine true_branch(): boolean is
+    var a: boolean is true
+    if a then
+        return true
+    else
+        return false
+    end
+    return true
+end
+
+routine false_branch(): boolean is
+    var a: boolean is false
+    if a then
+        return true
+    else
+        return false
+    end
+    return true
+end
+
+
+routine for_loop(): integer is
+    var a: integer is 0
+    var i: integer
+    for i in 0 .. 5 loop
+        a := a + 1
+    end
+    return a
+end
+
+routine inversed_for_loop(): integer is
+    var a: integer is 0
+    var i: integer
+    for i in reverse 10 .. 0 loop
+        a := a + 1
+    end
+    return a
+end
+
+routine while_loop(): integer is
+    var a: integer is 0
+    var i: integer is 0
+    while i < 9 loop
+        a := a + 1
+        i := i + 1
+    end
+    return a
+end
+
+
+routine int_array(): integer is
+    var a: array [5] integer
+    a[0] := 0
+    a[1] := 1
+    a[2] := 2
+    a[3] := 3
+    a[4] := 4
+    a[5] := 5
+    return a[2]
+end
+
+routine float_array(): real is
+    var a: array [3] real
+    a[0] := 1.5
+    a[1] := 3.25
+    a[2] := 4.5
+    return a[2]
+end
+
+routine boolean_array(): boolean is
+    var a: array [2] boolean
+    a[0] := false
+    a[1] := true
+    return a[1]
+end
+
+routine two_dim_array(): integer is
+    var a: array [4] array [4] integer
+    a[1][1] := 5
+    a[2][3] := 6
+    return a[2][3]
+end
+
+
+type rec is record
+    var a: integer
+    var b: real
+end
+
+routine give_int_field(): integer is
+    var a: rec
+    a.a := 7
+    a.b := 3.5
+    return a.a
+end
